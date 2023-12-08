@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.js">
+</script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    >
+   
+  </head>
+  <body>
+    <img src="./photo-1589810264340-0ce27bfbf751.webp" alt="" class="w-full h-80" >
+    <div 
+      class="sm:text-black flex flex-col text-center items-center relative bottom-64
+        rounded-2xl " id="div">
+      
+      <h1 class="text-3xl pb-6">User Login</h1>
+      <input type="text " placeholder="User name" id="input1" class="pl-2 rounded border-black border-2 mb-2" />
+      <input type="text" placeholder="password" id="input2" class="pl-2 rounded border-black border-2" />
+      <a href="" class="text-gray-200 hover:text-black">Fogot Password?</a>
+      <button
+        onclick="call()"
+        class="border-2 border-black pl-4 pr-4 pb-1 mt-3 rounded-xl w-20 hover:bg-black text-white hover:border-2 hover:border-white "
+      >
+        Login
+      </button>
+    </div>
+    <script>
+      function call() {
+        var datas = [
+          { name: "dk", password: 123 },
+          { name: "kdk", password: 231 },
+          { name: "kd", password: 321 },
+        ];
+        var check = false;
+        var Input1 = document.getElementById("input1").value;
+        var Input2 = document.getElementById("input2").value;
+        for (let i of datas) {
+          if (i.name == Input1 && i.password == Input2) {
+            check = true;
+          }
+        }
+        if (check) {
+          console.log("Login:", "Login success");
+          alert("Login Success")
+        
+
+        } else {
+          console.log("Login:", "Login Fail");
+          alert("Login Failed")
+        }
+      }
+    </script>
+  </body>
+</html>
